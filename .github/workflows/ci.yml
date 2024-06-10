@@ -24,3 +24,4 @@ jobs:
           BRANCH: gh-pages
           FOLDER: dist/prod
           CLEAN: true
+

@@ -10,8 +10,14 @@ export class Equip {
         this.allStat = 0;
         this.levelReduction = 0;
         this.weight = 1;
-        this.statMultiplier = 1 + Math.floor(level / 20);
-        this.multiplier = 1 + Math.floor(level / 40);
+        if (level <= 200) {
+            this.statMultiplier = 1 + Math.floor(level / 20);
+            this.multiplier = 1 + Math.floor(level / 40);
+        }
+        else {
+            this.statMultiplier = 12;
+            this.multiplier = 7;
+        }
 
         this.advantagedRedFlameWeights = new Map();
         this.advantagedEternalFlameWeights = new Map();
